@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.demo.ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-02T16:04:14.109Z" hostname="LAPTOP-OVL668BC" time="1.032">
+<testsuite name="com.example.demo.ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-02T18:46:59.769Z" hostname="LAPTOP-OVL668BC" time="1.219">
   <properties/>
-  <testcase name="contextLoads()" classname="com.example.demo.ApplicationTests" time="1.032"/>
-  <system-out><![CDATA[21:34:10.780 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:34:11.026 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.Application for test class com.example.demo.ApplicationTests
+  <testcase name="contextLoads()" classname="com.example.demo.ApplicationTests" time="1.219"/>
+  <system-out><![CDATA[00:16:57.077 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:16:57.260 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.Application for test class com.example.demo.ApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,9 +14,9 @@
 
  :: Spring Boot ::                (v3.4.7)
 
-2025-07-02T21:34:11.999+05:30  INFO 20364 --- [First Spring boot app (CRUD)] [    Test worker] com.example.demo.ApplicationTests        : Starting ApplicationTests using Java 21.0.7 with PID 20364 (started by SHRAMAN in C:\Users\SHRAMAN\Documents\demo)
-2025-07-02T21:34:12.002+05:30  INFO 20364 --- [First Spring boot app (CRUD)] [    Test worker] com.example.demo.ApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2025-07-02T21:34:14.077+05:30  INFO 20364 --- [First Spring boot app (CRUD)] [    Test worker] com.example.demo.ApplicationTests        : Started ApplicationTests in 2.701 seconds (process running for 5.424)
+2025-07-03T00:16:57.917+05:30  INFO 20608 --- [First Spring boot app (CRUD)] [    Test worker] com.example.demo.ApplicationTests        : Starting ApplicationTests using Java 21.0.7 with PID 20608 (started by SHRAMAN in C:\Users\SHRAMAN\Documents\demo)
+2025-07-03T00:16:57.919+05:30  INFO 20608 --- [First Spring boot app (CRUD)] [    Test worker] com.example.demo.ApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2025-07-03T00:16:59.744+05:30  INFO 20608 --- [First Spring boot app (CRUD)] [    Test worker] com.example.demo.ApplicationTests        : Started ApplicationTests in 2.246 seconds (process running for 4.1)
 ]]></system-out>
   <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (C:\Users\SHRAMAN\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
