@@ -1,0 +1,51 @@
+# ========================
+# Java & Spring Boot
+# ========================
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+logs/
+
+
+
+# Gradle build directory
+/build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Environment/config
+.env
+application.properties
+application.yml
+*.local
+*.backup
+
+# ========================
+# IntelliJ IDEA
+# ========================
+
+# Project files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Out directory
+/out/
+
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+
+
+
+# Package distribution
+*.jar
+*.war
+*.ear
