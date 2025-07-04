@@ -1,28 +1,23 @@
 package com.example.demo.controller;
 
+import com.example.demo.services.ICategoryService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/api/categories")
+@RequestMapping("api/categories")
 public class CategoryController {
 
+    private final ICategoryService categoryService;
+
+    // Constructor-based dependency injection
+    public CategoryController(ICategoryService categoryService) {
+        this.categoryService = categoryService;
+    }
+
     @GetMapping
-    public String getCategory(){
-        return "Electronics";
-    }
-
-    @PostMapping
-    public String getPostCategory(){
-        return "Post Electronics";
-    }
-
-    @GetMapping("/count")
-    public int getCategoryCount(){
-        return 5;
-    }
-
-    @DeleteMapping
-    public String deleteCategory(){
-        return "Category deleted";
+    public List<String> getAllCategories() {
+        return this.categoryService.getAllCategories();
     }
 }
