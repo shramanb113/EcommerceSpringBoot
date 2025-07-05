@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.dto.FullProductDTO;
+import com.example.demo.dto.ProductByIDTO;
 import com.example.demo.gateway.IProductGateway;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,15 @@ public class FakeStoreProductService implements IProductService {
     public List<FullProductDTO> getAllProducts() {
         try {
             return this.productGateway.getAllProducts();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to retrieve products", e);
+        }
+    }
+
+    @Override
+    public ProductByIDTO getProductByID(int id) {
+        try {
+            return this.productGateway.getProductByID(id);
         } catch (Exception e) {
             throw new RuntimeException("Failed to retrieve products", e);
         }

@@ -1,17 +1,18 @@
 package com.example.demo.dto;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 @Getter
 @Setter
-@Builder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @JsonIgnoreProperties(ignoreUnknown = true) // ← key for ignoring unknown fields
 @JsonInclude(JsonInclude.Include.NON_NULL)  // ← only serialize non-null fields
-public class FullProductDTO {
+public class ProductByIDTO {
     private int id;
     private String title;
     private String image;
@@ -24,6 +25,4 @@ public class FullProductDTO {
     private boolean popular;
     private int discount;
     private boolean onSale;
-
-
 }
