@@ -17,12 +17,10 @@ public class FakeStoreCategoryService implements ICategoryService {
     }
 ;
     @Override
-    public List<String> getAllCategories() {
+    public List<CategoryDTO> getAllCategories() {
         try {
-            return categoryGateway.getAllCategories()
-                    .stream()
-                    .map(CategoryDTO::getName)
-                    .toList();
+            return categoryGateway.getAllCategories();
+
         } catch (IOException e) {
             throw new RuntimeException("Failed to fetch categories", e);
         }

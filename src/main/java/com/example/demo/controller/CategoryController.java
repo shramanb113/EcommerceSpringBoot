@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.CategoryDTO;
 import com.example.demo.services.ICategoryService;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ public class CategoryController {
     }
 
     @GetMapping
-    public List<String> getAllCategories() {
+    public List<CategoryDTO> getAllCategories() {
         return this.categoryService.getAllCategories();
     }
 }
