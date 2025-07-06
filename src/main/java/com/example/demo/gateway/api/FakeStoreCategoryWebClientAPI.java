@@ -2,6 +2,7 @@ package com.example.demo.gateway.api;
 
 import com.example.demo.dto.FakeStoreCategoryResponseDTO;
 import com.example.demo.dto.FakeStoreProductResponseDTO;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -13,11 +14,11 @@ public class FakeStoreCategoryWebClientAPI {
         this.webClient = webClient;
     }
 
-    public FakeStoreCategoryResponseDTO getAllFakeStoreCategories(){
+    public ResponseEntity<FakeStoreCategoryResponseDTO> getAllFakeStoreCategories(){
         return webClient.get()
                 .uri("api/products/category")
                 .retrieve()
-                .bodyToMono(FakeStoreCategoryResponseDTO.class)
+                .toEntity(FakeStoreCategoryResponseDTO.class)
                 .block();
 
     }
