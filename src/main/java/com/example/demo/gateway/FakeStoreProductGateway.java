@@ -3,6 +3,7 @@ package com.example.demo.gateway;
 
 import com.example.demo.dto.*;
 import com.example.demo.gateway.api.FakeStoreProductAPI;
+import com.example.demo.mapper.GetAllProductsMapper;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.util.List;
@@ -24,15 +25,8 @@ public class FakeStoreProductGateway implements IProductGateway {
             throw new RuntimeException("Empty response from FakeStore API");
         }
 
-        return response.getProducts()
-                .stream()
-                .map(prod-> ProductDisplayDTO.builder()
-                        .id(prod.getId())
-                        .title(prod.getTitle())
-                        .category(prod.getCategory())
-                        .price(prod.getPrice())
-                        .build())
-                .toList();
+        return GetAllProductsMapper.toConvertToProductDisplayDTO(response);
+
     }
 
     @Override
