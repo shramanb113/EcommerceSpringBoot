@@ -2,8 +2,7 @@ package com.example.demo.gateway.api;
 
 import com.example.demo.dto.FakeStoreProductByIDResponseDTO;
 import com.example.demo.dto.FakeStoreProductResponseDTO;
-import com.example.demo.dto.FullProductDTO;
-import com.example.demo.dto.ProductByIDTO;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -30,4 +29,5 @@ public class FakeStoreProductAPI {
                 .bodyToMono(FakeStoreProductByIDResponseDTO.class)
                 .block();
     }
+
 }

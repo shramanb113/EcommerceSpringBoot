@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.CategoryDTO;
 import com.example.demo.services.ICategoryService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,7 +19,9 @@ public class CategoryController {
     }
 
     @GetMapping
-    public List<CategoryDTO> getAllCategories() {
-        return this.categoryService.getAllCategories();
+    public ResponseEntity<List<CategoryDTO>> getAllCategories() {
+        List<CategoryDTO> result= this.categoryService.getAllCategories();
+        return ResponseEntity.ok(result);
+
     }
 }

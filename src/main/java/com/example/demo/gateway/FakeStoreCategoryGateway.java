@@ -3,6 +3,7 @@ package com.example.demo.gateway;
 import com.example.demo.dto.CategoryDTO;
 import com.example.demo.dto.FakeStoreCategoryResponseDTO;
 import com.example.demo.gateway.api.FakeStoreCategoryAPI;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
