@@ -2,6 +2,7 @@ package com.example.demo.services;
 
 import com.example.demo.dto.FullProductDTO;
 import com.example.demo.dto.ProductByIDTO;
+import com.example.demo.dto.ProductDisplayDTO;
 import com.example.demo.gateway.IProductGateway;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ public class FakeStoreProductService implements IProductService {
     }
 
     @Override
-    public List<FullProductDTO> getAllProducts() {
+    public List<ProductDisplayDTO> getAllProducts() {
         try {
             return this.productGateway.getAllProducts();
         } catch (Exception e) {

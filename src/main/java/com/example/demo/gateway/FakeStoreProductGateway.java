@@ -1,10 +1,7 @@
 package com.example.demo.gateway;
 
 
-import com.example.demo.dto.FakeStoreProductByIDResponseDTO;
-import com.example.demo.dto.FakeStoreProductResponseDTO;
-import com.example.demo.dto.FullProductDTO;
-import com.example.demo.dto.ProductByIDTO;
+import com.example.demo.dto.*;
 import com.example.demo.gateway.api.FakeStoreProductAPI;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
@@ -20,14 +17,22 @@ public class FakeStoreProductGateway implements IProductGateway {
     }
 
     @Override
-    public List<FullProductDTO> getAllProducts() {
+    public List<ProductDisplayDTO> getAllProducts() {
         FakeStoreProductResponseDTO response = fakeStoreProductAPI.getAllFakeProducts();
 
         if (response == null || response.getProducts() == null) {
             throw new RuntimeException("Empty response from FakeStore API");
         }
 
-        return response.getProducts();
+        return response.getProducts()
+                .stream()
+                .map(prod-> ProductDisplayDTO.builder()
+                        .id(prod.getId())
+                        .title(prod.getTitle())
+                        .category(prod.getCategory())
+                        .price(prod.getPrice())
+                        .build())
+                .toList();
     }
 
     @Override

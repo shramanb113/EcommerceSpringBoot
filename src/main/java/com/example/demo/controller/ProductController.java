@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.FullProductDTO;
 import com.example.demo.dto.ProductByIDTO;
+import com.example.demo.dto.ProductDisplayDTO;
 import com.example.demo.services.IProductService;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class ProductController {
 
 
     @GetMapping
-    public List<FullProductDTO> getAllProducts(){
+    public List<ProductDisplayDTO> getAllProducts(){
         return this.productService.getAllProducts();
     }
 
