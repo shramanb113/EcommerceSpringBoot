@@ -3,6 +3,7 @@ package com.example.demo.gateway;
 import com.example.demo.dto.CategoryDTO;
 import com.example.demo.dto.FakeStoreCategoryResponseDTO;
 import com.example.demo.gateway.api.FakeStoreCategoryWebClientAPI;
+import com.example.demo.mapper.GetAllCategoriesMapper;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -26,13 +27,7 @@ public class FakeStoreCategoryWebClientGateway implements ICategoryGateway {
             throw new IOException("Not Received");
         }
         else{
-            return fakeStoreCategoryResponseDTO.getBody().getCategories()
-                    .stream()
-                    .map(category->CategoryDTO
-                            .builder()
-                            .name(category)
-                            .build())
-                    .toList();
+            return GetAllCategoriesMapper.convertFromFakeStoreCategoryResponseDTOtoCategoryDTO(fakeStoreCategoryResponseDTO.getBody());
         }
     }
 }
