@@ -4,10 +4,13 @@ import io.github.cdimascio.dotenv.Dotenv;
 import okhttp3.OkHttpClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @SpringBootApplication
+// Jpa auditing changes
+@EnableJpaAuditing
 public class EcommerceSpringBootApplication {
 
 	public static void main(String[] args) {
