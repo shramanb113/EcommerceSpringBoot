@@ -12,7 +12,6 @@ import lombok.*;
 @NoArgsConstructor
 public class Product extends BaseEntity {
 
-    private int id;
     private String title;
     private String image;
     private int price;
